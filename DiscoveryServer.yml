@@ -3,4 +3,4 @@ eureka:
     hostname: localhost
   client:
     fetch-registry: false
-    register-with-eureka: true
+    register-with-eureka: false
