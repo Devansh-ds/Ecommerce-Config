@@ -11,6 +11,13 @@ spring:
     url: jdbc:mysql://localhost:3309/orders
     username: root
     password: password
+  kafka:
+    producer:
+      bootstrap-servers: localhost:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      properties:
+        spring.json.type.mapping: orderConfirmation:com.sadds.OrderService.kafka.OrderConfirmation
 
 eureka:
   instance:
