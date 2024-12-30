@@ -19,7 +19,3 @@ eureka:
     register-with-eureka: true
     service-url:
       defaultZone: http://localhost:8761/eureka
-application:
-  config:
-    customer-service-url: http://localhost:8082
-    product-service-url: http://localhost:8081
