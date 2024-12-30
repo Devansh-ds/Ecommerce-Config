@@ -31,4 +31,4 @@ application:
   config:
     customer-service-url: http://localhost:8082/customers
     product-service-url: http://localhost:8081/products
-
+    payment-service-url: http://localhost:8084/payment
