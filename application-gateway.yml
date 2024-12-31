@@ -7,36 +7,35 @@ eureka:
     service-url:
       defaultZone: http://localhost:8761/eureka/
 spring:
-    cloud:
-      gateway:
-        discovery:
-          locator:
-            enabled: true
-        routes:
-          - id: customer-service
-            uri: lb:http://CUSTOMER-SERVICE
-            predicates:
-              - Path=/customers/**
-          - id: order-service
-            uri: lb:http://ORDER-SERVICE
-            predicates:
-              - Path=/orders/**
-          - id: order-lines-service
-            uri: lb:http://ORDER-SERVICE
-            predicates:
-              - Path=/order-line/**
-          - id: product-service
-            uri: lb:http://PRODUCT-SERVICE
-            predicates:
-              - Path=/products/**
-          - id: product-service
-            uri: lb:http://PRODUCT-SERVICE
-            predicates:
-              - Path=/category/**
-          - id: payment-service
-            uri: lb:http://PAYMENT-SERVICE
-            predicates:
-              - Path=/payment/**
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: customer-service
+          uri: lb:http://CUSTOMER-SERVICE
+          predicates:
+            - Path=/customers/**
+        - id: order-service
+          uri: lb:http://ORDER-SERVICE
+          predicates:
+            - Path=/orders/**
+        - id: order-lines-service
+          uri: lb:http://ORDER-SERVICE
+          predicates:
+            - Path=/order-line/**
+        - id: product-service
+          uri: lb:http://PRODUCT-SERVICE
+          predicates:
+            - Path=/products/**
+        - id: product-service
+          uri: lb:http://PRODUCT-SERVICE
+          predicates:
+            - Path=/category/**
+        - id: payment-service
+          uri: lb:http://PAYMENT-SERVICE
+          predicates:
+            - Path=/payment/**
 server:
-    port: 8222
-  
+  port: 8086
