@@ -1,4 +1,12 @@
-  spring:
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+spring:
     cloud:
       gateway:
         discovery:
@@ -29,13 +37,6 @@
             uri: lb:http://PAYMENT-SERVICE
             predicates:
               - Path=/payment/**
-  server:
+server:
     port: 8222
-  eureka:
-  instance:
-    prefer-ip-address: true
-  client:
-    register-with-eureka: true
-    fetch-registry: true
-    service-url:
-      defaultZone: http://localhost:8761/eureka/
+  
