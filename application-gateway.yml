@@ -20,19 +20,11 @@ spring:
         - id: order-service
           uri: lb:http://ORDER-SERVICE
           predicates:
-            - Path=/orders/**
-        - id: order-lines-service
-          uri: lb:http://ORDER-SERVICE
-          predicates:
-            - Path=/order-line/**
-        - id: product-service-product
+            - Path=/orders/**, /order-line/**
+        - id: product-service
           uri: lb:http://PRODUCT-SERVICE
           predicates:
-            - Path=/products/**
-        - id: product-service-category
-          uri: lb:http://PRODUCT-SERVICE
-          predicates:
-            - Path=/category/**
+            - Path=/products/**, /category/**
         - id: payment-service
           uri: lb:http://PAYMENT-SERVICE
           predicates:
