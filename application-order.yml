@@ -29,6 +29,6 @@ eureka:
       defaultZone: http://localhost:8761/eureka
 application:
   config:
-    customer-service-url: http://localhost:8082/customers
-    product-service-url: http://localhost:8081/products
-    payment-service-url: http://localhost:8084/payment
+    customer-service-url: http://localhost:8082
+    product-service-url: http://localhost:8081
+    payment-service-url: http://localhost:8084
