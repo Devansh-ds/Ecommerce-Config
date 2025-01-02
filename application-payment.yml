@@ -18,7 +18,10 @@ spring:
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
       properties:
         spring.json.type.mapping: paymentConfirmation:com.sadds.PaymentService.kafka.PaymentConfirmation
-
+management:
+  tracing:
+    sampling:
+      probability: 1.0
 eureka:
   instance:
     prefer-ip-address: true
