@@ -21,6 +21,17 @@ spring:
       properties:
         spring.json.trusted.packages: '*'
         spring.json.type.mapping: orderConfirmation:com.sadds.NotificationService.entity.OrderConfirmation, paymentConfirmation:com.sadds.NotificationService.entity.PaymentConfirmation
+  # mail:
+  #   host: smtp.gmail.com
+  #   port: 587
+  #   username: <your email>
+  #   password: <your password>
+  #   properties:
+  #     mail:
+  #       smtp:
+  #         auth: true
+  #         starttls:
+  #           enable: true
 management:
   tracing:
     sampling:
