@@ -31,3 +31,7 @@ spring:
               - Path=/payment/**
 server:
   port: 8086
+management:
+  tracing:
+    sampling:
+      probability: 1.0
