@@ -12,8 +12,7 @@ spring:
       discovery:
         locator:
           enabled: true
-      mvc:
-        routes:
+      routes:
           - id: customer-service
             uri: lb:http://CUSTOMER-SERVICE
             predicates:
